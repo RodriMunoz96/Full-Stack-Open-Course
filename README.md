@@ -1,2 +1,2 @@
-# Full-Stack-Open-Course
-This is the repository for the full-stack course from Helsinki University
+# Full-Stack-Open
+Exercises of the "Full Stack Open" free course from the University of Helsinki
