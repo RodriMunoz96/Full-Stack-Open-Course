@@ -1,11 +1,7 @@
 import { useState } from "react";
 
-const StatisticLine = ({ text, value }) => {
-  return (
-    <div>
-      {text} {value}
-    </div>
-  );
+const StatisticLine = ({ value }) => {
+  return <div>{value}</div>;
 };
 
 const Statistics = ({ good, neutral, bad, all, average, positive }) => {
@@ -20,12 +16,46 @@ const Statistics = ({ good, neutral, bad, all, average, positive }) => {
   return (
     <div>
       <h1>Statistics</h1>
-      <StatisticLine text="Good" value={good} />
-      <StatisticLine text="Neutral" value={neutral} />
-      <StatisticLine text="Bad" value={bad} />
-      <StatisticLine text="All" value={all} />
-      <StatisticLine text="Average" value={average} />
-      <StatisticLine text="Positive" value={positive} />
+      <table>
+        <tbody>
+          <tr>
+            <td>Good</td>
+            <td>
+              <StatisticLine value={good} />
+            </td>
+          </tr>
+          <tr>
+            <td>Neutral</td>
+            <td>
+              <StatisticLine value={neutral} />
+            </td>
+          </tr>
+          <tr>
+            <td>Bad</td>
+            <td>
+              <StatisticLine value={bad} />
+            </td>
+          </tr>
+          <tr>
+            <td>All</td>
+            <td>
+              <StatisticLine value={all} />
+            </td>
+          </tr>
+          <tr>
+            <td>Average</td>
+            <td>
+              <StatisticLine value={average} />
+            </td>
+          </tr>
+          <tr>
+            <td>Positive</td>
+            <td>
+              <StatisticLine value={positive} />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
